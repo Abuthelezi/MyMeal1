@@ -81,7 +81,7 @@ class MainActivity : ComponentActivity() {
                             "Afternoon" -> "Grilled Chicken Wrap:"
                             "Mid-afternoon" -> "cranberries or raisins), seeds (like sunflower)"
                             "Dinner" -> "Stir-Fried Veggie Noodles with Chicken"
-                            else -> ("Invalid food, please reset and refer to input box.")
+                            else -> ("Invalid time, please reset and refer to input box.")
 
                         }
 
