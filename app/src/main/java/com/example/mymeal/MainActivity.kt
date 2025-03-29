@@ -32,6 +32,9 @@ class MainActivity : ComponentActivity() {
             var meal_type by remember {
                 mutableStateOf("")
             }
+            var anyCase by remember {
+                mutableStateOf("")
+            }
             var time_of_the_day by remember {
                 mutableStateOf("")
             }
@@ -75,15 +78,18 @@ class MainActivity : ComponentActivity() {
                 Row {
                     Button(onClick = {
                         //validation in enter button
-                        meal_type = when(time_of_the_day){
-                            "Morning" -> "Spread mashed avocado on a slice of whole-grain toast"
-                            "Mid-morning" -> "Peanut Butter Banana Wraps"
-                            "Afternoon" -> "Grilled Chicken Wrap:"
-                            "Mid-afternoon" -> "cranberries or raisins), seeds (like sunflower)"
-                            "Dinner" -> "Stir-Fried Veggie Noodles with Chicken"
-                            else -> ("Invalid time, please reset and refer to input box.")
-
-                        }
+                        meal_type = if (time_of_the_day == "Morning"){
+                            "Spread mashed avocado on a slice of whole-grain toast"
+                    }else if(time_of_the_day == "Mid-morning"){
+                        "Peanut Butter Banana Wraps"
+                    }else if(time_of_the_day == "Afternoon") {
+                            "Peanut Butter Banana Wraps"
+                        }else if(time_of_the_day == "Mid-afternoon"){
+                            "cranberries or raisins), seeds (like sunflower)"
+                        }else if(time_of_the_day == "Dinner"){
+                           "Stir-Fried Veggie Noodles with Chicken"
+                        } else
+                            "Invalid time, please reset and refer to input box."
 
                     }) {
                         Text("Enter")
