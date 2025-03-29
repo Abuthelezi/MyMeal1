@@ -66,7 +66,7 @@ class MainActivity : ComponentActivity() {
                     },
                     //This to show the instructions in the textbox.
                     placeholder = {
-                        Text("Enter time of day:Morning;Mid-morning,Afternoon, Mid-afternoon or dinner")
+                        Text("Enter time of day:Morning;Mid-morning,Afternoon, Mid-afternoon or Dinner")
                     }
 
                 )
